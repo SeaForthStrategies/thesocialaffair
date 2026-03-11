@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# macOS resource forks
+._*
+.DS_Store
+
+# Raw source images (large files — use public/images/ instead)
+images/
+
+# Environment files
+.env
+.env.local
+.env*.local
+
+# pnpm
+.pnpm-debug.log*

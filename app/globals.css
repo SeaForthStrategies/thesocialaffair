@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --burgundy: #C41E3A;
+  --blush: #F2C4C9;
+  --cream: #F7F3EE;
+  --ivory: #FDFCF8;
+  --charcoal: #1E1E1E;
+  --gold: #C9A962;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-inter bg-ivory antialiased;
+  color: #1E1E1E;
+  font-size: 16px;
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+}
+
+/* Paragraph rhythm */
+p {
+  line-height: 1.75;
+  color: #2a2a2a;
+}
+
+/* Custom text selection */
+::selection {
+  background-color: var(--burgundy);
+  color: #fff;
+}
+
+/* Refined thin scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--burgundy);
+  opacity: 0.4;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  opacity: 1;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Elegant section fade-up */
+  .fade-up {
+    @apply opacity-0 translate-y-4 transition-all duration-700 ease-out;
+  }
+  .fade-up.in-view {
+    @apply opacity-100 translate-y-0;
+  }
+}
