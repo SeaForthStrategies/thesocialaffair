@@ -24,22 +24,22 @@ export default function CTASection({
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       />
-      {/* Rich dark overlay */}
-      <div className="absolute inset-0 bg-charcoal/80" />
-      <div className="absolute inset-0 bg-gradient-to-br from-burgundy-900/40 via-transparent to-black/30" />
+      {/* Warm dark overlay */}
+      <div className="absolute inset-0 bg-[#1C0A00]/78" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#6B2000]/30 via-transparent to-[#1C0A00]/30" />
 
       {/* Corner ornaments — desktop only */}
-      <div className="hidden sm:block absolute top-8 left-8 w-14 h-14 border-t border-l border-white/15 rounded-tl-sm" />
-      <div className="hidden sm:block absolute top-8 right-8 w-14 h-14 border-t border-r border-white/15 rounded-tr-sm" />
-      <div className="hidden sm:block absolute bottom-8 left-8 w-14 h-14 border-b border-l border-white/15 rounded-bl-sm" />
-      <div className="hidden sm:block absolute bottom-8 right-8 w-14 h-14 border-b border-r border-white/15 rounded-br-sm" />
+      <div className="hidden sm:block absolute top-8 left-8 w-14 h-14 border-t border-l border-[#D4A96A]/20 rounded-tl-sm" />
+      <div className="hidden sm:block absolute top-8 right-8 w-14 h-14 border-t border-r border-[#D4A96A]/20 rounded-tr-sm" />
+      <div className="hidden sm:block absolute bottom-8 left-8 w-14 h-14 border-b border-l border-[#D4A96A]/20 rounded-bl-sm" />
+      <div className="hidden sm:block absolute bottom-8 right-8 w-14 h-14 border-b border-r border-[#D4A96A]/20 rounded-br-sm" />
 
       <div className="relative mx-auto max-w-2xl text-center text-white px-2">
         {/* Ornament */}
-        <div className="flex items-center justify-center gap-3 mb-7">
-          <div className="h-px w-10 bg-burgundy/70" />
-          <div className="w-1.5 h-1.5 rounded-full bg-burgundy" />
-          <div className="h-px w-10 bg-burgundy/70" />
+        <div className="flex items-center justify-center gap-4 mb-8">
+          <div className="h-px w-10 bg-gradient-to-r from-transparent to-[#D4A96A]/60" />
+          <span className="text-[#D4A96A]/70 text-sm">✦</span>
+          <div className="h-px w-10 bg-gradient-to-l from-transparent to-[#D4A96A]/60" />
         </div>
 
         <h2 className="font-playfair text-3xl md:text-5xl font-light leading-tight mb-4">
@@ -55,14 +55,14 @@ export default function CTASection({
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
           <Link
             href={primaryCta.href}
-            className="flex items-center justify-center rounded-full bg-burgundy text-white px-9 py-4 text-xs font-semibold tracking-widest uppercase hover:bg-burgundy-700 active:scale-95 transition-all shadow-xl shadow-burgundy/40"
+            className="flex items-center justify-center rounded-full bg-[#B8935A] text-white px-9 py-4 text-xs font-semibold tracking-[0.2em] uppercase hover:bg-[#D4A96A] active:scale-95 transition-all shadow-xl shadow-black/30"
           >
             {primaryCta.label}
           </Link>
           {secondaryCta && (
             <Link
               href={secondaryCta.href}
-              className="flex items-center justify-center rounded-full border-2 border-white/50 text-white px-9 py-4 text-xs font-semibold tracking-widest uppercase hover:bg-white/15 hover:border-white/80 active:scale-95 transition-all"
+              className="flex items-center justify-center rounded-full border border-white/30 text-white/85 px-9 py-4 text-xs font-semibold tracking-[0.2em] uppercase hover:bg-white/10 hover:border-white/50 active:scale-95 transition-all"
             >
               {secondaryCta.label}
             </Link>

@@ -13,11 +13,11 @@ export default function AnimatedDivider() {
         transition={{ duration: 0.9, ease: "easeOut" }}
         style={{ transformOrigin: "center" }}
       >
-        <div className="h-px w-16 bg-gradient-to-r from-transparent to-burgundy/40" />
-        <div className="w-1 h-1 rounded-full bg-burgundy/40" />
-        <div className="h-px w-8 bg-burgundy/40" />
+        <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#D4A96A]/35" />
+        <div className="w-1 h-1 rounded-full bg-[#D4A96A]/35" />
+        <div className="h-px w-8 bg-[#D4A96A]/35" />
         <motion.div
-          className="font-script text-2xl text-burgundy/60 leading-none px-2"
+          className="text-sm text-[#D4A96A]/55 leading-none px-2"
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -25,9 +25,9 @@ export default function AnimatedDivider() {
         >
           ✦
         </motion.div>
-        <div className="h-px w-8 bg-burgundy/40" />
-        <div className="w-1 h-1 rounded-full bg-burgundy/40" />
-        <div className="h-px w-16 bg-gradient-to-l from-transparent to-burgundy/40" />
+        <div className="h-px w-8 bg-[#D4A96A]/35" />
+        <div className="w-1 h-1 rounded-full bg-[#D4A96A]/35" />
+        <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#D4A96A]/35" />
       </motion.div>
     </div>
   );

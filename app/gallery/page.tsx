@@ -30,22 +30,22 @@ export default function PhotosPage() {
   return (
     <>
       {/* Header */}
-      <div className="bg-charcoal text-ivory py-16 md:py-24 px-5 text-center">
-        <div className="flex items-center justify-center gap-3 mb-5">
-          <div className="h-px w-10 bg-burgundy/70" />
-          <div className="w-1.5 h-1.5 rounded-full bg-burgundy" />
-          <div className="h-px w-10 bg-burgundy/70" />
+      <div className="bg-[#1C0A00] text-[#FAF7F2] py-16 md:py-24 px-5 text-center">
+        <div className="flex items-center justify-center gap-4 mb-6">
+          <div className="h-px w-10 bg-gradient-to-r from-transparent to-[#D4A96A]/50" />
+          <span className="text-[#D4A96A]/65 text-xs">✦</span>
+          <div className="h-px w-10 bg-gradient-to-l from-transparent to-[#D4A96A]/50" />
         </div>
-        <h1 className="font-playfair text-4xl md:text-5xl font-light text-white mb-3">
+        <h1 className="font-playfair text-4xl md:text-5xl font-light text-[#FAF7F2] mb-3">
           The Social Affair
         </h1>
-        <p className="text-sm tracking-widest uppercase text-ivory/55">
+        <p className="text-[10px] tracking-[0.25em] uppercase text-[#FAF7F2]/50">
           East Troy, Wisconsin
         </p>
       </div>
 
       {/* Masonry photo wall */}
-      <div className="bg-charcoal px-1 pb-1">
+      <div className="bg-[#1C0A00] px-1 pb-1">
         <div className="columns-2 sm:columns-3 lg:columns-4 gap-1 space-y-1">
           {photos.map((photo) => (
             <div

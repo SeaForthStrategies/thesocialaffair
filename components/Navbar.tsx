@@ -18,7 +18,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/98 backdrop-blur-lg border-b border-charcoal/10 shadow-sm">
+    <header className="sticky top-0 z-50 w-full bg-[#FAF7F2]/97 backdrop-blur-lg border-b border-[#D4A96A]/15 shadow-sm shadow-[#2C1A0E]/5">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 md:px-10 py-3.5 md:py-4" aria-label="Main">
 
         {/* Logo */}
@@ -41,13 +41,13 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`relative text-xs tracking-widest uppercase font-medium transition-colors pb-1 group ${
-                    isActive ? "text-burgundy" : "text-charcoal/65 hover:text-charcoal"
+                  className={`relative text-xs tracking-[0.18em] uppercase font-medium transition-colors pb-1 group ${
+                    isActive ? "text-[#7D0A1E]" : "text-[#2C1A0E]/55 hover:text-[#2C1A0E]"
                   }`}
                 >
                   {link.label}
                   <span
-                    className={`absolute -bottom-0.5 left-0 h-px bg-burgundy transition-all duration-300 ${
+                    className={`absolute -bottom-0.5 left-0 h-px bg-[#B8935A] transition-all duration-300 ${
                       isActive ? "w-full" : "w-0 group-hover:w-full"
                     }`}
                   />
@@ -61,20 +61,20 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-5">
           <Link
             href="/contact"
-            className={`relative text-xs tracking-widest uppercase font-medium transition-colors pb-1 group ${
-              pathname === "/contact" ? "text-burgundy" : "text-charcoal/65 hover:text-charcoal"
+            className={`relative text-xs tracking-[0.18em] uppercase font-medium transition-colors pb-1 group ${
+              pathname === "/contact" ? "text-[#7D0A1E]" : "text-[#2C1A0E]/55 hover:text-[#2C1A0E]"
             }`}
           >
             Contact
             <span
-              className={`absolute -bottom-0.5 left-0 h-px bg-burgundy transition-all duration-300 ${
+              className={`absolute -bottom-0.5 left-0 h-px bg-[#B8935A] transition-all duration-300 ${
                 pathname === "/contact" ? "w-full" : "w-0 group-hover:w-full"
               }`}
             />
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center rounded-full bg-burgundy text-white px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-burgundy-700 transition-colors shadow-md shadow-burgundy/25"
+            className="inline-flex items-center justify-center rounded-full bg-[#B8935A] text-white px-6 py-2.5 text-xs font-semibold tracking-[0.18em] uppercase hover:bg-[#D4A96A] transition-colors shadow-md shadow-[#B8935A]/25"
           >
             Book a Tour
           </Link>
@@ -86,7 +86,7 @@ export default function Navbar() {
           <a
             href="tel:2623702994"
             aria-label="Call The Social Affair"
-            className="p-2.5 text-burgundy hover:bg-burgundy/8 rounded-full transition-colors"
+            className="p-2.5 text-[#B8935A] hover:bg-[#B8935A]/10 rounded-full transition-colors"
           >
             <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -98,7 +98,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="p-2.5 text-charcoal/70 hover:text-burgundy hover:bg-burgundy/8 rounded-full transition-colors"
+            className="p-2.5 text-[#2C1A0E]/60 hover:text-[#7D0A1E] hover:bg-[#B8935A]/10 rounded-full transition-colors"
             aria-expanded={mobileOpen}
             aria-label="Toggle menu"
           >
@@ -121,7 +121,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.22, ease: "easeInOut" }}
-            className="md:hidden overflow-hidden border-t border-charcoal/8 bg-white"
+            className="md:hidden overflow-hidden border-t border-[#D4A96A]/15 bg-[#FAF7F2]"
           >
             <ul className="flex flex-col px-5 py-4 gap-0">
               {[...navLinks, { href: "/contact", label: "Contact" }].map((link) => {
@@ -131,8 +131,8 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       onClick={() => setMobileOpen(false)}
-                      className={`flex items-center py-4 text-sm tracking-widest uppercase font-medium transition-colors border-b border-charcoal/6 min-h-[52px] ${
-                        isActive ? "text-burgundy" : "text-charcoal/70 hover:text-burgundy"
+                      className={`flex items-center py-4 text-sm tracking-[0.18em] uppercase font-medium transition-colors border-b border-[#D4A96A]/12 min-h-[52px] ${
+                        isActive ? "text-[#7D0A1E]" : "text-[#2C1A0E]/65 hover:text-[#7D0A1E]"
                       }`}
                     >
                       {link.label}
@@ -144,13 +144,13 @@ export default function Navbar() {
                 <Link
                   href="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className="flex items-center justify-center rounded-full bg-burgundy text-white px-6 py-3.5 text-xs font-semibold tracking-widest uppercase hover:bg-burgundy-700 transition-colors"
+                  className="flex items-center justify-center rounded-full bg-[#B8935A] text-white px-6 py-3.5 text-xs font-semibold tracking-[0.18em] uppercase hover:bg-[#D4A96A] transition-colors"
                 >
                   Book a Tour
                 </Link>
                 <a
                   href="sms:2623702994"
-                  className="flex items-center justify-center gap-2 rounded-full border border-charcoal/15 text-charcoal/70 px-6 py-3 text-xs font-medium tracking-widest uppercase hover:bg-cream transition-colors"
+                  className="flex items-center justify-center gap-2 rounded-full border border-[#2C1A0E]/15 text-[#2C1A0E]/60 px-6 py-3 text-xs font-medium tracking-[0.18em] uppercase hover:bg-[#F2EAE0] transition-colors"
                 >
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}

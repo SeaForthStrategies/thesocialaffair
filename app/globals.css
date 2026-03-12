@@ -3,12 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --burgundy: #C41E3A;
+  --burgundy: #7D0A1E;
   --blush: #F2C4C9;
-  --cream: #F7F3EE;
-  --ivory: #FDFCF8;
-  --charcoal: #1E1E1E;
-  --gold: #C9A962;
+  --cream: #F2EAE0;
+  --ivory: #FAF7F2;
+  --linen: #F5EDE0;
+  --parchment: #EDE0CC;
+  --charcoal: #2C1A0E;
+  --walnut: #3B2012;
+  --gold: #B8935A;
+  --gold-light: #D4A96A;
 }
 
 html {
@@ -16,41 +20,41 @@ html {
 }
 
 body {
-  @apply font-inter bg-ivory antialiased;
-  color: #1E1E1E;
+  @apply font-inter antialiased;
+  background-color: #FAF7F2;
+  color: #2C1A0E;
   font-size: 16px;
   font-feature-settings: "kern" 1, "liga" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 /* Paragraph rhythm */
 p {
-  line-height: 1.75;
-  color: #2a2a2a;
+  line-height: 1.8;
+  color: #3B2012;
 }
 
 /* Custom text selection */
 ::selection {
-  background-color: var(--burgundy);
+  background-color: var(--gold);
   color: #fff;
 }
 
-/* Refined thin scrollbar */
+/* Warm thin scrollbar */
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 3px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--linen);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--burgundy);
-  opacity: 0.4;
+  background: var(--gold);
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  opacity: 1;
+  background: var(--burgundy);
 }
 
 @layer utilities {
